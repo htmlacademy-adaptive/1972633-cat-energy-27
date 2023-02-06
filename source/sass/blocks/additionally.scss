@@ -1,0 +1,130 @@
+.additionally__title {
+  display: inline-block;
+  position: relative;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 300;
+  color: $black;
+  margin: 0 0 36px 0;
+}
+
+.additionally__title::after {
+  position: absolute;
+  content: "";
+  width: 100vw;
+  height: 2px;
+  background-color: $green;
+  z-index: -1;
+  left: calc(100% + 22px);
+  top: 59%;
+}
+
+.additionally__container {
+  margin: 0 0 35px 0;
+}
+
+.additionally__list {
+  margin: 0 0 35px 0;
+  padding: 0;
+  list-style-type: none;
+  border-top: 1px solid $darkbasegrey;
+}
+
+.additionally__item {
+  padding: 0 0 19px 0;
+  border-bottom: 1px solid $darkbasegrey;
+}
+
+.additionally__subtitle {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  color: $accentgrey;
+  text-transform: uppercase;
+  padding: 12px 0 0;
+  margin: 0 0 13px 0;
+
+  &--space-top {
+    padding: 15px 0 0;
+  }
+}
+
+
+.additionally__wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 16px 0;
+}
+
+.additionally__name {
+  font-family: $second-font;
+  font-size: 14px;
+  line-height: 14px;
+  color: $darkgrey;
+}
+
+.additionally__value {
+  font-family: $second-font;
+  font-size: 14px;
+  line-height: 14px;
+  color: $darkgrey;
+}
+
+.additionally__gift {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/catalog/gift-cat.png");
+  background-repeat: no-repeat;
+  padding: 59px 0 28px;
+  background-size: cover;
+
+  @media (min-resolution: 2dppx) {
+    background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/catalog/gift-cat@2x.png");
+  }
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    justify-content: space-between;
+    background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/catalog/gift-cat-tablet.png");
+    padding: 57px 124px 60px 77px;
+    max-height: 200px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/catalog/gift-cat-tablet@2x.png");
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/catalog/gift-cat.png");
+    padding: 59px 0 28px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/catalog/gift-cat@2x.png");
+    }
+  }
+}
+
+.additionally__icon {
+  margin: 0 0 61px 0;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    width: 80px;
+    height: 83px;
+  }
+}
+
+.additionally__text {
+  font-family: $second-font;
+  font-size: 16px;
+  line-height: 20px;
+  color: $white;
+  max-width: 161px;
+  text-align: center;
+  margin: 0;
+
+  @media (min-width: $tablet-width) {
+    text-align: left;
+  }
+}

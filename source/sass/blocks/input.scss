@@ -1,0 +1,63 @@
+.input {
+  padding: 14px 16px 12px 21px;
+  font-family: $main-font;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+  text-transform: uppercase;
+  outline: 1px solid $grey;
+  border: none;
+  width: 100%;
+
+  &--owner {
+    padding: 14px 39px 13px 14px;
+  }
+
+  &--space-m {
+    padding: 14px 16px 13px 20px;
+  }
+}
+
+.input:not(:placeholder-shown) {
+  color: $darkgrey;
+}
+
+.input::placeholder {
+  color: rgba($darkgrey, 0.3);
+}
+
+.input:hover {
+  outline: 1px solid $darkbasegrey;
+}
+
+.input:active,
+.input:focus {
+  outline: 2px solid $darkgrey;
+}
+
+.input:disabled {
+  background-color: $generalgrey;
+  pointer-events: none;
+}
+
+.input.error:focus {
+  outline: 2px solid $error;
+}
+
+.input.error:focus ~ .interview__icon {
+  color: $error;
+}
+
+.input:focus ~ .interview__icon {
+  color: $green;
+}
+
+.input:disabled::placeholder {
+  pointer-events: none;
+  opacity: 0.3;
+}
+
+.input:disabled ~ .interview__icon {
+  pointer-events: none;
+  opacity: 0.3;
+}

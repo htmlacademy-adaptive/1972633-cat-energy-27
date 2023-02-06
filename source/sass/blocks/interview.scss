@@ -1,0 +1,246 @@
+.interview {
+  padding: 0 0 32px 0;
+}
+
+.interview__title {
+  font-size: 36px;
+  line-height: 36px;
+  color: $black;
+  font-weight: 400;
+  margin: 0 0 37px;
+}
+
+.interview__title-inner {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: $black;
+  margin: 0 0 39px;
+}
+
+.interview__fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.interview__legend {
+  position: relative;
+  font-size: 24px;
+  line-height: 26px;
+  color: $black;
+  padding: 0 22px 0 0;
+  margin: 0 0 34px 0;
+  background-color: $white;
+
+  &--space {
+    padding: 0 14px 0 0;
+
+    @media (max-width: $mobile-width-onlly) {
+      width: 72%;
+    }
+  }
+}
+
+.interview__legend::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  width: 100vw;
+  height: 2px;
+  background-color: $green;
+  z-index: -1;
+  top: 50%;
+}
+
+.interview__legend--space::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  width: 100vw;
+  height: 2px;
+  background-color: $green;
+  z-index: -1;
+  top: 50%;
+  transform: translateY(-10px);
+}
+
+
+.interview__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  &--info {
+    margin: 0 -20px;
+    padding: 0 20px 24px;
+    border-bottom: 1px solid $silvergrey;
+  }
+
+  &--radio {
+    margin: 0 -20px 26px;
+    padding: 23px 20px 16px;
+    border-bottom: 1px solid $silvergrey;
+  }
+
+  &--owner {
+    margin: 0 0 26px;
+  }
+
+  &--checkbox {
+    margin: 0 0 31px 0;
+  }
+}
+
+
+.interview__item {
+  margin: 0 0 14px 0;
+  display: flex;
+  align-items: center;
+
+  &--owner {
+    position: relative;
+  }
+}
+
+.interview__item:last-child {
+  margin: 0;
+}
+
+
+.interview__icon {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}
+
+.interview__label {
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  margin: 0 14px 0 0;
+  flex-shrink: 0;
+
+  &--control {
+    margin: -3px 0 0 0;
+    padding: 0 0 0 15px;
+    color: $accentgrey;
+  }
+
+  &--color {
+    color: $black;
+  }
+
+  &--owner {
+    margin: 0 10px 0 0;
+  }
+}
+
+.interview__label-radio {
+  display: flex;
+  align-items: center;
+}
+
+.interview__label-radio:hover .interview__control-mark,
+.interview__label-checkbox:hover .interview__control-mark {
+  border: 1px solid $disabledgrey;
+}
+
+.interview__label-radio:active .interview__control-mark,
+.interview__label-checkbox:active .interview__control-mark {
+  border: 1px solid $darkgrey;
+}
+
+.interview__label-radio:focus-within .interview__label,
+.interview__label-checkbox:focus-within .interview__label {
+  opacity: 0.5;
+}
+
+
+.interview__label-radio .interview__control-mark {
+  border-radius: 50%;
+}
+
+.interview__label-checkbox {
+  display: flex;
+  align-items: center;
+}
+
+
+.interview__control-mark {
+  position: relative;
+  display: block;
+  width: 30px;
+  height: 30px;
+  border: 1px solid $darkbasegrey;
+}
+
+.interview__input-radio:checked + .interview__control-mark::after {
+  content: "";
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  background-color: $green;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+}
+
+.interview__input-checkbox:checked + .interview__control-mark::after {
+  content: "";
+  position: absolute;
+  background-image: url("../img/checked.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+}
+
+.interview__input-radio:disabled + .interview__control-mark,
+.interview__input-checkbox:disabled + .interview__control-mark {
+  border-color: rgba($disabledgrey, 0.3);
+  pointer-events: none;
+}
+
+.interview__input-radio:disabled + .interview__control-mark::after,
+.interview__input-checkbox:disabled + .interview__control-mark::after {
+  opacity: 0.3;
+}
+
+.interview__input-radio:disabled ~ .interview__label--control,
+.interview__input-checkbox:disabled ~ .interview__label--control {
+  color: rgba($accentgrey, 0.3);
+  pointer-events: none;
+}
+
+.interview__textarea {
+  font-family: $main-font;
+  font-size: 16px;
+  color: $darkgrey;
+  text-transform: uppercase;
+  width: 100%;
+  padding: 5px 12px 9px 13px;
+  resize: none;
+  border: 1px solid $grey;
+  min-height: 150px;
+  margin: 0 0 22px 0;
+}
+
+.interview__button {
+  margin: 0 0 21px 0;
+}
+
+.interview__text-remark {
+  font-family: $second-font;
+  display: block;
+  line-height: 18px;
+  color: $black;
+  text-align: center;
+}

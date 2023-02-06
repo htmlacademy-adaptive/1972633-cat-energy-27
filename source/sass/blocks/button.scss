@@ -1,0 +1,71 @@
+.button {
+  font-family: $main-font;
+  display: block;
+  border: 0;
+  cursor: pointer;
+  background-color: $green;
+  text-align: center;
+  font-size: 16px;
+  line-height: 20px;
+  width: 100%;
+  padding: 9px 0;
+  text-transform: uppercase;
+  color: $white;
+}
+
+.button:hover {
+  background-color: $accentgreen;
+}
+
+.button:active {
+  background-color: $accentgreen;
+  color: rgba($white, 0.3);
+}
+
+.button:focus-visible {
+  color: rgba($white, 0.5);
+  opacity: 0.5;
+  outline: none;
+}
+
+.button:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.button[aria-disabled="true"] {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.button--second {
+  font-size: 14px;
+  line-height: 18px;
+  padding: 12px 0 11px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    padding: 14px 0 11px;
+  }
+}
+
+.button--dim {
+  background-color: $generalgrey;
+  color: $darkgrey;
+}
+
+.button--dim:hover {
+  background-color: $lightgrey;
+}
+
+.button--dim:active {
+  background-color: $lightgrey;
+  color: rgba($darkgrey, 0.3);
+}
+
+.button--dim:focus-visible {
+  background-color: $lightgrey;
+  color: rgba($darkgrey, 0.5);
+  outline: none;
+}

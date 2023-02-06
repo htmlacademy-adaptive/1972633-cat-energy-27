@@ -1,0 +1,24 @@
+.main-container {
+  flex-grow: 1;
+}
+
+.main-container__title {
+  padding: 27px 20px 41px;
+  border-bottom: 1px solid $silvergrey;
+  border-top: 1px solid $silvergrey;
+
+  @media (min-width: $tablet-width) {
+    border: none;
+    margin: 0 0 163px 0;
+  }
+
+  &--space {
+    padding: 27px 20px 37px;
+    border-bottom: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 65px 39px 0;
+    margin: 0 0 54px 0;
+  }
+}
