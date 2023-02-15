@@ -5,13 +5,20 @@
   line-height: 24px;
   font-weight: 300;
   color: $black;
-  margin: 0 0 36px 0;
+  margin: 0 0 35px 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+    padding: 0 0 0 36px;
+    margin: 0 0 80px 0;
+  }
 }
 
 .additionally__title::after {
   position: absolute;
   content: "";
-  width: 100vw;
+  // width: 100vw;
   height: 2px;
   background-color: $green;
   z-index: -1;
@@ -21,6 +28,10 @@
 
 .additionally__container {
   margin: 0 0 35px 0;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 75px 0;
+  }
 }
 
 .additionally__list {
@@ -28,11 +39,25 @@
   padding: 0;
   list-style-type: none;
   border-top: 1px solid $darkbasegrey;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 69px 0;
+  }
 }
 
 .additionally__item {
-  padding: 0 0 19px 0;
+  padding: 0 0 18px;
   border-bottom: 1px solid $darkbasegrey;
+
+  @media (min-width: $tablet-width) {
+    padding: 26px 39px 27px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    border-left: 1px solid $darkbasegrey;
+    border-right: 1px solid $darkbasegrey;
+  }
 }
 
 .additionally__subtitle {
@@ -44,8 +69,19 @@
   padding: 12px 0 0;
   margin: 0 0 13px 0;
 
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
+    padding: 0;
+    margin: 0 0 25px 0;
+  }
+
   &--space-top {
     padding: 15px 0 0;
+
+    @media (min-width: $tablet-width) {
+      padding: 0;
+    }
   }
 }
 
@@ -54,20 +90,39 @@
   display: flex;
   justify-content: space-between;
   margin: 0 0 16px 0;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 23px 0;
+  }
+
+  &--space {
+    margin: 0 0 21px 0;
+  }
 }
 
-.additionally__name {
-  font-family: $second-font;
-  font-size: 14px;
-  line-height: 14px;
-  color: $darkgrey;
-}
-
+.additionally__name,
 .additionally__value {
   font-family: $second-font;
   font-size: 14px;
   line-height: 14px;
   color: $darkgrey;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+.additionally__value {
+  @media (min-width: $tablet-width) {
+    margin: 0 0 0 53px;
+  }
+}
+
+.additionally__value--space {
+  @media (min-width: $tablet-width) {
+    margin: 0 0 0 60px;
+  }
 }
 
 .additionally__gift {
@@ -76,7 +131,7 @@
   align-items: center;
   background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/catalog/gift-cat.png");
   background-repeat: no-repeat;
-  padding: 59px 0 28px;
+  padding: 59px 0 44px;
   background-size: cover;
 
   @media (min-resolution: 2dppx) {
@@ -106,7 +161,7 @@
 }
 
 .additionally__icon {
-  margin: 0 0 61px 0;
+  margin: 0 0 48px 0;
 
   @media (min-width: $tablet-width) {
     margin: 0;
