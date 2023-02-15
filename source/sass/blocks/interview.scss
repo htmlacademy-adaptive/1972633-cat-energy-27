@@ -37,7 +37,7 @@
   &--space {
     padding: 0 14px 0 0;
 
-    @media (max-width: $mobile-width-onlly) {
+    @media (max-width: $mobile-width-only) {
       width: 72%;
     }
   }
@@ -74,7 +74,7 @@
 
   &--info {
     margin: 0 -20px;
-    padding: 0 20px 24px;
+    padding: 0 20px 25px;
     border-bottom: 1px solid $silvergrey;
   }
 
@@ -89,7 +89,7 @@
   }
 
   &--checkbox {
-    margin: 0 0 31px 0;
+    margin: 0 0 34px 0;
   }
 }
 
@@ -101,6 +101,10 @@
 
   &--owner {
     position: relative;
+  }
+
+  &--checkbox {
+    margin: 0 0 12px 0;
   }
 }
 
@@ -119,7 +123,7 @@
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
-  margin: 0 14px 0 0;
+  margin: 0 15px 0 0;
   flex-shrink: 0;
 
   &--control {
@@ -176,7 +180,7 @@
   border: 1px solid $darkbasegrey;
 }
 
-.interview__input-radio:checked + .interview__control-mark::after {
+.interview__input-radio:checked+.interview__control-mark::after {
   content: "";
   position: absolute;
   width: 13px;
@@ -190,7 +194,7 @@
   margin: auto;
 }
 
-.interview__input-checkbox:checked + .interview__control-mark::after {
+.interview__input-checkbox:checked+.interview__control-mark::after {
   content: "";
   position: absolute;
   background-image: url("../img/checked.svg");
@@ -203,19 +207,19 @@
   margin: auto;
 }
 
-.interview__input-radio:disabled + .interview__control-mark,
-.interview__input-checkbox:disabled + .interview__control-mark {
+.interview__input-radio:disabled+.interview__control-mark,
+.interview__input-checkbox:disabled+.interview__control-mark {
   border-color: rgba($disabledgrey, 0.3);
   pointer-events: none;
 }
 
-.interview__input-radio:disabled + .interview__control-mark::after,
-.interview__input-checkbox:disabled + .interview__control-mark::after {
+.interview__input-radio:disabled+.interview__control-mark::after,
+.interview__input-checkbox:disabled+.interview__control-mark::after {
   opacity: 0.3;
 }
 
-.interview__input-radio:disabled ~ .interview__label--control,
-.interview__input-checkbox:disabled ~ .interview__label--control {
+.interview__input-radio:disabled~.interview__label--control,
+.interview__input-checkbox:disabled~.interview__label--control {
   color: rgba($accentgrey, 0.3);
   pointer-events: none;
 }
@@ -226,7 +230,7 @@
   color: $darkgrey;
   text-transform: uppercase;
   width: 100%;
-  padding: 5px 12px 9px 13px;
+  padding: 6px 11px 9px 15px;
   resize: none;
   border: 1px solid $grey;
   min-height: 150px;

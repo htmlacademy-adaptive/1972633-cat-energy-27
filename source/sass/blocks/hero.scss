@@ -6,7 +6,15 @@
   padding: 27px 0 20px;
 
   @media (min-width: $tablet-width) {
-    padding: 62px 0 20px;
+    padding: 64px 0 0;
+    min-height: 874px;
+    justify-content: flex-start;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 111px 0 0;
+    min-height: 581px;
+    margin: 0 0 83px 0;
   }
 }
 
@@ -31,6 +39,21 @@
   @media (min-width: $tablet-width) {
     display: none;
   }
+
+  @media (min-width: $desktop-width) {
+    display: block;
+    height: 693px;
+    background-image: url("../img/hero/hero-desktop.jpg"), linear-gradient(to right, rgba(99, 167, 60, 1), 50%, rgba(97, 165, 58, 1));
+    background-position: right bottom;
+    width: 50%;
+    right: 0;
+    left: 50%;
+    top: -112px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/hero/hero-desktop@2x.jpg"), linear-gradient(to right, rgba(99, 167, 60, 1), 50%, rgba(97, 165, 58, 1));
+    }
+  }
 }
 
 .hero__image {
@@ -39,24 +62,39 @@
 
   @media (min-width: $tablet-width) {
     width: auto;
+    position: absolute;
+    top: 265px;
+    z-index: -1;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 30px;
+    transform: translateX(-162px);
   }
 }
 
 .hero__title {
-  margin: 0 0 26px;
+  margin: 0 auto 26px;
   text-align: center;
+  max-width: 414px;
 
   @media (min-width: $tablet-width) {
     max-width: 432px;
     text-align: start;
-    margin: 0 0 41px 88px;
+    margin: 0 0 39px 88px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 0 39px 79px;
   }
 }
 
 .hero__text {
   line-height: 14px;
   text-transform: uppercase;
-  margin: 0 0 28px;
+  margin: 0 0 29px;
   color: $white;
   text-align: center;
 
@@ -64,16 +102,25 @@
     color: $black;
     font-size: 20px;
     line-height: 20px;
-    margin: 0 0 20px 90px;
+    margin: 0 0 51px 90px;
     text-align: start;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 0 53px 80px;
   }
 }
 
 .hero__link {
   @media (min-width: $tablet-width) {
-    position: absolute;
+    // position: absolute;
+    // top: 294px;
+    // left: 121px;
     max-width: 244px;
-    top: 290px;
-    left: 113px;
+    margin: 0 0 0 90px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 0 0 81px;
   }
 }

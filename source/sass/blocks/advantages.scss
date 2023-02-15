@@ -4,23 +4,79 @@
   line-height: 40px;
   color: $black;
   margin: 0 0 41px 2px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    margin: 0 0 72px;
+  }
 }
 
 .advantages__list {
   padding: 0;
   list-style-type: none;
   margin: 0 0 49px 1px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 80px 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 0 59px 1px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    column-gap: 0;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0 0 37px 1px;
+  }
 }
 
 .advantages__item {
   display: flex;
   align-items: center;
   margin: 0 0 20px 0;
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+    flex-direction: column;
+    align-items: self-start;
+    margin: 0;
+    padding: 0 0 44px 0;
+    width: 39%;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 20%;
+    margin: 0;
+  }
+}
+
+.advantages__item:nth-child(-n+2) {
+  @media (min-width: $tablet-width) {
+    margin: 0 0 90px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+  }
 }
 
 .advantages__text {
   font-family: $second-font;
   margin: 0;
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+    font-size: 16px;
+    line-height: 24px;
+    flex-direction: column;
+    align-items: self-start;
+    z-index: 3;
+  }
 }
 
 .advantages__image {
@@ -31,6 +87,12 @@
   height: 60px;
   margin: 0 20px 0 0;
   background-color: $green;
+
+  @media (min-width: $tablet-width) {
+    width: 80px;
+    height: 80px;
+    margin: 0 0 31px 0;
+  }
 }
 
 .advantages__icon {
@@ -44,4 +106,24 @@
 
 .advantages__number {
   display: none;
+
+  @media (min-width: $tablet-width) {
+    z-index: 1;
+    color: $generalgrey;
+    position: absolute;
+    display: block;
+    font-size: 280px;
+    line-height: 280px;
+    top: -40px;
+    right: -4px;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: -41px;
+    right: -2px;
+  }
+
+  &--space {
+    right: 19px;
+  }
 }
