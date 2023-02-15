@@ -180,7 +180,7 @@
   border: 1px solid $darkbasegrey;
 }
 
-.interview__input-radio:checked+.interview__control-mark::after {
+.interview__input-radio:checked + .interview__control-mark::after {
   content: "";
   position: absolute;
   width: 13px;
@@ -194,7 +194,7 @@
   margin: auto;
 }
 
-.interview__input-checkbox:checked+.interview__control-mark::after {
+.interview__input-checkbox:checked + .interview__control-mark::after {
   content: "";
   position: absolute;
   background-image: url("../img/checked.svg");
@@ -207,19 +207,19 @@
   margin: auto;
 }
 
-.interview__input-radio:disabled+.interview__control-mark,
-.interview__input-checkbox:disabled+.interview__control-mark {
+.interview__input-radio:disabled + .interview__control-mark,
+.interview__input-checkbox:disabled + .interview__control-mark {
   border-color: rgba($disabledgrey, 0.3);
   pointer-events: none;
 }
 
-.interview__input-radio:disabled+.interview__control-mark::after,
-.interview__input-checkbox:disabled+.interview__control-mark::after {
+.interview__input-radio:disabled + .interview__control-mark::after,
+.interview__input-checkbox:disabled + .interview__control-mark::after {
   opacity: 0.3;
 }
 
-.interview__input-radio:disabled~.interview__label--control,
-.interview__input-checkbox:disabled~.interview__label--control {
+.interview__input-radio:disabled ~ .interview__label--control,
+.interview__input-checkbox:disabled ~ .interview__label--control {
   color: rgba($accentgrey, 0.3);
   pointer-events: none;
 }
