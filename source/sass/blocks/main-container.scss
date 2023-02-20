@@ -1,26 +1,4 @@
 .main-container {
   flex-grow: 1;
-}
-
-.main-container__title {
-  padding: 27px 20px 41px;
-  border-bottom: 1px solid $silvergrey;
-  border-top: 1px solid $silvergrey;
-  margin: 0 -20px;
-
-  @media (min-width: $tablet-width) {
-    border: none;
-    margin: 0 0 161px 0;
-    padding: 63px 0 0;
-  }
-
-  @media (min-width: $desktop-width) {
-    padding: 78px 0 0;
-  }
-
-  &--space {
-    padding: 27px 20px 37px;
-    border-bottom: none;
-    margin: 0 -20px;
-  }
+  overflow: hidden;
 }

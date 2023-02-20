@@ -16,6 +16,8 @@
 }
 
 .programs__item {
+  display: flex;
+  flex-direction: column;
   position: relative;
   margin: 0 0 21px;
   padding: 25px 21px 21px;
@@ -170,6 +172,8 @@
   display: flex;
   padding: 17px 0 0 0;
   align-items: center;
+  transition: 0.3s;
+  align-self: flex-start;
 
   @media (min-width: $tablet-width) {
     grid-column: 1/2;

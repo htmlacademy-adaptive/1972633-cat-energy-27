@@ -12,7 +12,7 @@
   <link rel="preload" href="js/script.js" as="script">
 </head>
 
-<body class="page__body">
+<body class="page__body page__body--form">
   <header class="header">
     <div class="container">
       <div class="header__container">
@@ -28,15 +28,15 @@
           <button class="main-nav__toggle" type="button">
             <span class="visually-hidden">Кнопка открытия меню</span>
           </button>
-          <ul class="main-nav__list">
-            <li class="main-nav__item">
+          <ul class="main-nav__list main-nav__list--space">
+            <li class="main-nav__item main-nav__item--space">
               <a class="main-nav__link" href="index.html">Главная</a>
             </li>
-            <li class="main-nav__item">
+            <li class="main-nav__item main-nav__item--space">
               <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
             </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link main-nav__link--current">Подбор программы</a>
+            <li class="main-nav__item main-nav__item--space">
+              <span class="main-nav__link main-nav__link--current">Подбор программы</span>
             </li>
           </ul>
         </nav>
@@ -44,13 +44,11 @@
     </div>
   </header>
   <main class="main-container">
-    <div class="container">
-      <h1 class="main-container__title main-container__title--space title">Подбор программы</h1>
-    </div>
     <section class="interview">
       <div class="container">
-        <h1 class="interview__title-inner">Заполните анкету, и мы подберем<br>
-          программу питания для вашего кота</h1>
+        <h1 class="interview__title title">Подбор программы</h1>
+        <h2 class="interview__title-inner">Заполните анкету, и мы подберем<br>
+          программу питания для вашего кота</h2>
         <form class="interview__form" action="https://echo.htmlacademy.ru/" method="post">
           <div class="interview__wrapper">
             <fieldset class="interview__fieldset">
@@ -69,7 +67,7 @@
                     placeholder="Введите вес" type="text" required>
                 </li>
                 <li class="interview__item">
-                  <label class="interview__label" for="age-field">Возраст (лет):</label>
+                  <label class="interview__label" for="age-field">Возраст&nbsp;(лет):</label>
                   <!--input добавить атрибут disabled, для неактивного состояния -->
                   <input class="interview__input input" name="age" id="age-field" value="7"
                     placeholder="Введите возраст" type="text" required>
@@ -79,7 +77,7 @@
             <fieldset class="interview__fieldset">
               <legend class="visually-hidden">Необходимая программа</legend>
               <ul class="interview__list interview__list--radio">
-                <li class="interview__item">
+                <li class="interview__item interview__item--radio">
                   <label class="interview__label-radio">
                     <!--input добавить атрибут disabled, для неактивного состояния -->
                     <input class="visually-hidden interview__input-radio" value="slim" name="program" type="radio"
@@ -89,7 +87,7 @@
                     <span class="interview__label interview__label--control">Похудение</span>
                   </label>
                 </li>
-                <li class="interview__item">
+                <li class="interview__item interview__item--radio">
                   <label class="interview__label-radio">
                     <!--input добавить атрибут disabled, для неактивного состояния -->
                     <input class="visually-hidden interview__input-radio" value="massGain" name="program" type="radio">
@@ -98,7 +96,7 @@
                     <span class="interview__label interview__label--control">Набор массы</span>
                   </label>
                 </li>
-                <li class="interview__item">
+                <li class="interview__item interview__item--radio">
                   <label class="interview__label-radio">
                     <!--input добавить атрибут disabled, для неактивного состояния -->
                     <input class="visually-hidden interview__input-radio" value="advice" name="program" type="radio">
@@ -144,7 +142,7 @@
               placeholder="Расскажите обо всех повадках кота" rows="5"></textarea>
           </fieldset>
           <fieldset class="interview__fieldset">
-            <legend class="interview__legend">Дополнительно</legend>
+            <legend class="interview__legend interview__legend--checkbox">Дополнительно</legend>
             <ul class="interview__list interview__list--checkbox">
               <li class="interview__item interview__item--checkbox">
                 <label class="interview__label-checkbox">
@@ -185,20 +183,21 @@
               </li>
             </ul>
           </fieldset>
-          <button class="interview__button button" type="submit">Отправить заявку</button>
-          <span class="interview__text-remark">* — Обязательные поля</span>
+          <div class="interview__container">
+            <button class="interview__button button--second button" type="submit">Отправить заявку</button>
+            <span class="interview__text-remark">* — Обязательные поля</span>
+          </div>
         </form>
       </div>
     </section>
-    <section class="contacts">
+    <section class="contacts contacts--second">
       <h2 class="visually-hidden">Контакты магазина Cat energy</h2>
       <div class="container">
         <div class="contacts__wrapper">
           <p class="contacts__text">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
           <address class="contacts__address">
-            ул. Большая
-            Конюшенная, д. 19/8
-            Санкт-Петербург
+            ул. Большая Конюшенная, д. 19/8
+            <span class="contacts__address-city">Санкт-Петербург</span>
           </address>
         </div>
       </div>
@@ -225,8 +224,11 @@
     <div class="container">
       <div class="footer__wrapper">
         <a class="footer__link" href="index.html">
-          <img class="footer__link-logo" src="img/footer/footer-logo.svg" width="128" height="24"
-            alt="Текст Cat energy.">
+          <svg class="footer__link-logo" aria-hidden="true" focusable="false" width="129" height="24"
+            viewBox="0 0 129 24" xmlns="http://www.w3.org/2000/svg">
+            <use href="img/sprite.svg#footer-logo" />
+          </svg>
+          <span class="visually-hidden">Текстовый логотип Cat energy</span>
         </a>
         <ul class="footer__list social">
           <li class="social__item">

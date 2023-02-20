@@ -1,6 +1,13 @@
 .contacts {
   position: relative;
-  background-color: $generalgrey;
+
+  &--second {
+    background-color: $generalgrey;
+
+    @media (min-width: $desktop-width) {
+      background-color: $white;
+    }
+  }
 }
 
 .contacts__wrapper {
@@ -78,8 +85,7 @@
 
 .contacts__map-iframe {
   width: 100%;
-  top: 0;
-  left: 0;
+  display: block;
   height: 362px;
 
   @media (min-width: $tablet-width) {

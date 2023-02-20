@@ -7,7 +7,6 @@
   }
 }
 
-
 .main-nav__toggle {
   position: absolute;
   margin: 0 0 0 auto;
@@ -69,8 +68,8 @@
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: flex-end;
-    // min-width: 500px;
-    margin: 19px 0 0;
+    max-width: 500px;
+    margin: 18px 0 0;
     background-color: transparent;
   }
 
@@ -78,6 +77,12 @@
     margin: 14px 0 0;
     max-width: 600px;
     justify-content: flex-start;
+  }
+}
+
+.main-nav--closed .main-nav__list--space {
+  @media (min-width: $tablet-width) {
+    margin: 14px 0 0;
   }
 }
 
@@ -124,7 +129,14 @@
 
   @media (min-width: $tablet-width) {
     border-top: none;
-    margin: 0 0 10px;
+    margin: 0 37px 10px 0;
+  }
+
+  &--space {
+    @media (min-width: $tablet-width) {
+      border-top: none;
+      margin: 0 34px 10px 0;
+    }
   }
 }
 
@@ -133,6 +145,7 @@
 
   @media (min-width: $tablet-width) {
     border-bottom: none;
+    margin: 0;
   }
 }
 
@@ -148,6 +161,7 @@
   font-weight: 500;
   font-size: 20px;
   text-align: center;
+  transition: 0.3s;
 
   @media (min-width: $tablet-width) {
     font-family: $main-font;
@@ -155,7 +169,6 @@
     font-weight: 400;
     font-size: 18px;
     padding: 0;
-    margin: 0 37px 0 0;
   }
 
   @media (min-width: $desktop-width) {
@@ -170,6 +183,24 @@
     }
   }
 
+  &--current-accent::before {
+    @media (min-width: $tablet-width) {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      bottom: -7px;
+      left: 1px;
+      background-color: $accentgreen;
+    }
+
+    @media (min-width: $desktop-width) {
+      bottom: -7px;
+      background-color: $white;
+    }
+  }
+
+
   &--current::before {
     @media (min-width: $tablet-width) {
       content: "";
@@ -183,15 +214,14 @@
 
     @media (min-width: $desktop-width) {
       bottom: -7px;
-      left: 4px;
-    }
-
-    @media (min-width: $desktop-width) {
-      background-color: $white;
     }
   }
 
-  &:hover {
+  &:hover:not(.main-nav__link--current-accent) {
+    opacity: 0.6;
+  }
+
+  &:hover:not(.main-nav__link--current) {
     opacity: 0.6;
   }
 
@@ -199,11 +229,5 @@
   &:focus {
     opacity: 0.3;
     outline: none;
-  }
-}
-
-.main-nav__item:last-child .main-nav__link {
-  @media (min-width: $tablet-width) {
-    margin: 0;
   }
 }
