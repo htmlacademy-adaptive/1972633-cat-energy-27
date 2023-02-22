@@ -33,8 +33,14 @@
     border-bottom: none;
   }
 
-  &:hover {
-    color: $accentgreen;
+  &:hover,
+  &:focus-visible {
+    color: $eclipse;
+    outline: none;
+  }
+
+  &:active {
+    color: $lightdimgrey;
   }
 }
 

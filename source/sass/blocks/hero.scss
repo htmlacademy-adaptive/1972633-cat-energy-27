@@ -7,7 +7,6 @@
 
   @media (min-width: $tablet-width) {
     padding: 62px 0 0;
-    min-height: 872px;
     justify-content: flex-start;
   }
 
@@ -74,20 +73,6 @@
 .hero__image {
   display: block;
   margin: 0 auto 1px;
-
-  // @media (min-width: $tablet-width) {
-  //   width: auto;
-  //   position: absolute;
-  //   top: 263px;
-  //   z-index: -1;
-  //   left: 50%;
-  //   transform: translateX(-50%);
-  // }
-
-  // @media (min-width: $desktop-width) {
-  //   top: -82px;
-  //   transform: translateX(-162px);
-  // }
 }
 
 .hero__image-container {

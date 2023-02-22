@@ -1,5 +1,9 @@
 .interview {
-  padding: 0 0 32px 0;
+  padding: 0 0 30px 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 0 32px 0;
+  }
 }
 
 .interview__title {
@@ -81,7 +85,7 @@
   @media (min-width: $tablet-width) {
     font-size: 36px;
     line-height: 36px;
-    margin: 0 0 76px -3px;
+    margin: 0 0 76px -1px;
     padding: 0 41px 0 0;
   }
 
@@ -133,7 +137,7 @@
 
   &--info {
     margin: 0 -20px;
-    padding: 0 20px 25px;
+    padding: 0 20px 22px;
     border-bottom: 1px solid $silvergrey;
 
     @media (min-width: $tablet-width) {
@@ -172,10 +176,10 @@
     }
 
     @media (min-width: $desktop-width) {
-      display: flex;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
       align-items: center;
-      justify-content: space-between;
+      gap: 30px 78px;
     }
   }
 
@@ -186,16 +190,19 @@
   }
 
   &--checkbox {
-    margin: 0 0 34px 0;
+    margin: 0 0 33px 0;
 
     @media (min-width: $tablet-width) {
       margin: 0 0 51px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 33px 51px;
     }
 
     @media (min-width: $desktop-width) {
+      grid-template-columns: repeat(4, 20%);
+      justify-content: space-between;
+      row-gap: 30px;
       margin: 0 0 59px;
     }
   }
@@ -204,7 +211,8 @@
 
 .interview__item {
   margin: 0 0 14px 0;
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 1fr;
   align-items: center;
 
   @media (min-width: $tablet-width) {
@@ -219,28 +227,11 @@
 
   &--owner {
     position: relative;
-
-    @media (min-width: $desktop-width) {
-      flex-basis: 47%;
-      margin: 0 0 33px 0;
-    }
   }
 
   &--checkbox {
     margin: 0 0 12px 0;
 
-    @media (min-width: $tablet-width) {
-      flex-basis: 46%;
-      margin: 0 0 33px 0;
-    }
-
-    @media (min-width: $desktop-width) {
-      flex-basis: 20%;
-      margin: 0;
-    }
-  }
-
-  &--checkbox:nth-child(n+3) {
     @media (min-width: $tablet-width) {
       margin: 0;
     }
@@ -311,6 +302,12 @@
   border: 1px solid $disabledgrey;
 }
 
+
+.interview__label-radio:hover .interview__control-mark::after,
+.interview__label-checkbox:hover .interview__control-mark::after {
+  transform: scale(1.2);
+}
+
 .interview__label-radio:active .interview__control-mark,
 .interview__label-checkbox:active .interview__control-mark {
   border: 1px solid $darkgrey;
@@ -358,6 +355,7 @@
   bottom: 0;
   right: 0;
   margin: auto;
+  transition: 0.3s;
 }
 
 .interview__input-checkbox:checked + .interview__control-mark::after {
@@ -371,6 +369,7 @@
   bottom: 0;
   right: 0;
   margin: auto;
+  transition: 0.5s;
 }
 
 .interview__input-radio:disabled + .interview__control-mark,
@@ -437,6 +436,14 @@
     width: auto;
     min-width: 282px;
     margin: 0;
+  }
+}
+
+.interview__button.button--second {
+  @media (max-width: $mobile-width-only) {
+    font-size: 16px;
+    line-height: 20px;
+    padding: 10px 0;
   }
 }
 

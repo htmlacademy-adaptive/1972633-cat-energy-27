@@ -19,20 +19,31 @@
   top: -43px;
   right: 20px;
   z-index: 4;
-}
-
-.main-nav--closed .main-nav__toggle::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 24px;
-  height: 1.5px;
-  background-color: $black;
-  box-shadow: 0 8px 0 0 $black, 0 16px 0 0 $black;
 
   @media (min-width: $tablet-width) {
     display: none;
+  }
+}
+
+.main-nav__toggle-line {
+  position: absolute;
+  height: 2px;
+  left: 0;
+  right: 0;
+  display: block;
+  background-color: $black;
+  transition: 0.3s;
+
+  &:first-child {
+    top: 0;
+  }
+
+  &:nth-child(3) {
+    bottom: 0;
+  }
+
+  &:nth-child(2) {
+    top: 8px;
   }
 }
 
@@ -47,17 +58,6 @@
 .main-nav--open .main-nav__toggle:focus-visible {
   opacity: 0.3;
   outline: none;
-}
-
-.main-nav--open .main-nav__toggle::before,
-.main-nav--open .main-nav__toggle::after {
-  content: "";
-  position: absolute;
-  top: 9;
-  left: 0;
-  width: 25px;
-  height: 1.5px;
-  background-color: $black;
 }
 
 .main-nav--closed .main-nav__list {
@@ -86,19 +86,27 @@
   }
 }
 
-
-.main-nav--open .main-nav__toggle::before {
+.main-nav--open .main-nav__toggle-line:first-child {
+  top: 8px;
   transform: rotate(45deg);
 }
 
-.main-nav--open .main-nav__toggle::after {
+.main-nav--open .main-nav__toggle-line:nth-child(2) {
   transform: rotate(-45deg);
 }
+
+.main-nav--open .main-nav__toggle-line:nth-child(3) {
+  bottom: 8px;
+  transform: scale(0);
+}
+
 
 .main-nav--open .main-nav__list {
   position: absolute;
   width: 100%;
   z-index: 3;
+  // transition: 0.3s;
+  // transform: translateX(0);
 }
 
 .main-nav--nojs .main-nav__list {
@@ -108,7 +116,7 @@
   display: flex;
 }
 
-.main-nav--nojs .main-nav__toggle::before {
+.main-nav--nojs .main-nav__toggle {
   display: none;
 }
 
@@ -121,6 +129,7 @@
   list-style-type: none;
   width: 100%;
   background-color: $white;
+  // transform: translateX(100%);
 }
 
 .main-nav__item {
@@ -183,6 +192,22 @@
     }
   }
 
+  &--current::before {
+    @media (min-width: $tablet-width) {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      bottom: -9px;
+      left: 1px;
+      background-color: $accentgreen;
+    }
+
+    @media (min-width: $desktop-width) {
+      bottom: -7px;
+    }
+  }
+
   &--current-accent::before {
     @media (min-width: $tablet-width) {
       content: "";
@@ -200,25 +225,8 @@
     }
   }
 
-
-  &--current::before {
-    @media (min-width: $tablet-width) {
-      content: "";
-      position: absolute;
-      width: 100%;
-      height: 2px;
-      bottom: -9px;
-      left: 1px;
-      background-color: $accentgreen;
-    }
-
-    @media (min-width: $desktop-width) {
-      bottom: -7px;
-    }
-  }
-
-  &:hover:not(.main-nav__link--current-accent) {
-    opacity: 0.6;
+  &--current {
+    pointer-events: none;
   }
 
   &:hover:not(.main-nav__link--current) {

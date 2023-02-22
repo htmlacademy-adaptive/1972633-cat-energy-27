@@ -11,11 +11,12 @@
   padding: 10px 0;
   text-transform: uppercase;
   color: $white;
-  transition: 0.3s;
+  transition: 0.5s;
 }
 
 .button:hover {
   background-color: $accentgreen;
+  transform: translateY(-5px);
 }
 
 .button:active {
