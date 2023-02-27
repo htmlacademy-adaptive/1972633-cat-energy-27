@@ -59,10 +59,21 @@
   color: $dimgrey;
   padding: 20px 0 0;
   transition: 0.3s;
+  max-width: 200px;
 
   @media (min-width: $tablet-width) {
     padding: 0;
   }
+}
+
+.footer__copyright-link:hover,
+.footer__copyright-link:focus-within {
+  color: $green;
+  outline: none;
+}
+
+.footer__copyright-link:active {
+  opacity: 0.3;
 }
 
 
@@ -77,12 +88,6 @@
   }
 }
 
-.footer__copyright-link:hover,
-.footer__copyright-link:focus-within {
-  color: $green;
-  outline: none;
-}
-
-.footer__copyright-link:active {
-  opacity: 0.3;
+.footer__copyright-icon {
+  flex-shrink: 0;
 }

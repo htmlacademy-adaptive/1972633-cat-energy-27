@@ -46,7 +46,7 @@
 
 .programs__header {
   display: flex;
-  flex-wrap: wrap;
+  // flex-wrap: wrap;
   align-items: center;
   margin: 0 0 22px;
 
@@ -70,6 +70,7 @@
   border-radius: 50%;
   position: relative;
   margin: 0 19px 0 2px;
+  flex-shrink: 0;
 
   @media (min-width: $tablet-width) {
     position: absolute;
@@ -220,6 +221,7 @@
   transform: scaleX(1);
   transform-origin: left;
   transition: transform 0.5s;
+  flex-shrink: 0;
 }
 
 .programs__link:hover .programs__arrow {

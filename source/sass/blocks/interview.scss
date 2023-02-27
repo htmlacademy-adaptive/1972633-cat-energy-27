@@ -208,6 +208,15 @@
   }
 }
 
+.interview__list--info .interview__label,
+.interview__list--owner .interview__label {
+  max-width: 95px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 125px;
+  }
+}
+
 
 .interview__item {
   margin: 0 0 14px 0;
@@ -225,10 +234,6 @@
     }
   }
 
-  &--owner {
-    position: relative;
-  }
-
   &--checkbox {
     margin: 0 0 12px 0;
 
@@ -242,6 +247,9 @@
   margin: 0;
 }
 
+.interview__input-wrapper {
+  position: relative;
+}
 
 .interview__icon {
   position: absolute;
