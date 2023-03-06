@@ -28,14 +28,14 @@
   transition: 0.3s;
 }
 
-.social__link:hover {
+.social__link:hover,
+.social__link:focus-visible {
   color: $green;
+  outline: none;
 }
 
-.social__link:active,
-.social__link:focus {
+.social__link:active {
   opacity: 0.3;
-  outline: none;
 }
 
 .social__icon {

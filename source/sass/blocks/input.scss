@@ -50,11 +50,6 @@
   outline: 2px solid $darkgrey;
 }
 
-.input:disabled {
-  background-color: $generalgrey;
-  pointer-events: none;
-}
-
 .input.error {
   outline: 2px solid $error;
 }
@@ -67,9 +62,11 @@
   color: $green;
 }
 
-.input:disabled::placeholder {
+.input:disabled,
+.input:disabled:not(:placeholder-shown) {
+  background-color: $generalgrey;
   pointer-events: none;
-  opacity: 0.3;
+  color: rgba($darkgrey, 0.3);
 }
 
 .input:disabled ~ .interview__icon {

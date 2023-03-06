@@ -16,7 +16,6 @@
 
 .button:hover {
   background-color: $accentgreen;
-  transform: translateY(-5px);
 }
 
 .button:active {
@@ -25,7 +24,7 @@
 }
 
 .button:focus-visible {
-  color: rgba($white, 0.5);
+  color: rgba($white, 0.7);
   opacity: 0.5;
   outline: none;
 }
@@ -36,7 +35,7 @@
 }
 
 .button[aria-disabled="true"] {
-  opacity: 0.5;
+  opacity: 0.7;
   pointer-events: none;
 }
 

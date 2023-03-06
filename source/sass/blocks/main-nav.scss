@@ -105,8 +105,6 @@
   position: absolute;
   width: 100%;
   z-index: 3;
-  // transition: 0.3s;
-  // transform: translateX(0);
 }
 
 .main-nav--nojs .main-nav__list {
@@ -129,12 +127,10 @@
   list-style-type: none;
   width: 100%;
   background-color: $white;
-  // transform: translateX(100%);
 }
 
 .main-nav__item {
   border-top: 1px solid $lightsilvergrey;
-  margin: 0 -20px;
 
   @media (min-width: $tablet-width) {
     border-top: none;

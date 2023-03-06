@@ -59,10 +59,10 @@
   color: $dimgrey;
   padding: 20px 0 0;
   transition: 0.3s;
-  max-width: 200px;
 
   @media (min-width: $tablet-width) {
     padding: 0;
+    max-width: 200px;
   }
 }
 

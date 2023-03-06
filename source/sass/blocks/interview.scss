@@ -217,7 +217,6 @@
   }
 }
 
-
 .interview__item {
   margin: 0 0 14px 0;
   display: grid;
@@ -400,6 +399,7 @@
 .interview__textarea {
   font-family: $main-font;
   font-size: 16px;
+  line-height: 18px;
   color: $darkgrey;
   text-transform: uppercase;
   width: 100%;
@@ -408,6 +408,7 @@
   border: 1px solid $grey;
   min-height: 150px;
   margin: 0 0 22px 0;
+  background-color: transparent;
 
   @media (min-width: $tablet-width) {
     font-size: 20px;
@@ -419,6 +420,17 @@
   @media (min-width: $desktop-width) {
     margin: 0 0 66px 0;
   }
+
+  &:focus-visible {
+    background-color: $generalgrey;
+    outline: none;
+  }
+
+  &:disabled {
+    background-color: $generalgrey;
+    color: rgba($darkgrey, 0.3);
+    pointer-events: none;
+  }
 }
 
 .interview__container {
@@ -427,6 +439,7 @@
     align-items: center;
     justify-content: space-between;
     margin: 0 0 39px;
+    padding: 0 109px 0 0;
   }
 
   @media (min-width: $desktop-width) {
@@ -466,11 +479,13 @@
   @media (min-width: $tablet-width) {
     font-size: 16px;
     line-height: 16px;
-    padding: 0 110px 0 0;
     margin: -6px 0 0;
+    text-align: start;
+    padding: 0 0 0 20px;
   }
 
   @media (min-width: $desktop-width) {
     text-align: start;
+    padding: 0;
   }
 }
