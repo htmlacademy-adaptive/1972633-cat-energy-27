@@ -10,6 +10,25 @@
   }
 }
 
+.contacts--second .contacts__wrapper {
+  @media (min-width: $desktop-width) {
+    padding: 61px 80px 43px 80px;
+  }
+}
+
+.contacts--second .contacts__address {
+  @media (min-width: $desktop-width) {
+    max-width: 179px;
+  }
+}
+
+.contacts--second .contacts__address-city {
+  @media (min-width: $desktop-width) {
+    max-width: 127px;
+    margin: 0;
+  }
+}
+
 .contacts__wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
