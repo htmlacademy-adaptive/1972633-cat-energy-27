@@ -1,13 +1,25 @@
 .interview {
-  padding: 0 0 32px 0;
+  padding: 0 0 30px 0;
+
+  @media (min-width: $tablet-width) {
+    padding: 0 0 32px 0;
+  }
 }
 
 .interview__title {
-  font-size: 36px;
-  line-height: 36px;
-  color: $black;
-  font-weight: 400;
-  margin: 0 0 37px;
+  padding: 27px 20px 0;
+  margin: 0 -20px 37px;
+  border-top: 1px solid $silvergrey;
+
+  @media (min-width: $tablet-width) {
+    border: none;
+    margin: 0 0 54px;
+    padding: 61px 0 0 38px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 73px 0 0;
+  }
 }
 
 .interview__title-inner {
@@ -17,6 +29,42 @@
   text-transform: uppercase;
   color: $black;
   margin: 0 0 39px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    padding: 0 0 0 41px;
+    margin: 0 0 65px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+  }
+}
+
+.interview__form {
+  @media (min-width: $tablet-width) {
+    padding: 0 37px 0 41px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+  }
+}
+
+.interview__wrapper {
+  @media (min-width: $desktop-width) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 69px;
+  }
+}
+
+.interview__wrapper .interview__fieldset {
+  @media (min-width: $desktop-width) {
+    flex-basis: 47%;
+  }
 }
 
 .interview__fieldset {
@@ -34,11 +82,22 @@
   margin: 0 0 34px 0;
   background-color: $white;
 
-  &--space {
-    padding: 0 14px 0 0;
+  @media (min-width: $tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+    margin: 0 0 76px -1px;
+    padding: 0 41px 0 0;
+  }
 
+  &--space {
     @media (max-width: $mobile-width-only) {
-      width: 72%;
+      width: 73%;
+    }
+  }
+
+  &--checkbox {
+    @media (min-width: $tablet-width) {
+      margin: 0 0 58px 0;
     }
   }
 }
@@ -46,26 +105,30 @@
 .interview__legend::before {
   position: absolute;
   content: "";
-  left: 0;
+  left: 100%;
   width: 100vw;
   height: 2px;
   background-color: $green;
   z-index: -1;
-  top: 50%;
+  top: 14px;
+
+  @media (min-width: $tablet-width) {
+    top: 23px;
+  }
 }
 
-.interview__legend--space::before {
-  position: absolute;
-  content: "";
-  left: 0;
-  width: 100vw;
-  height: 2px;
-  background-color: $green;
-  z-index: -1;
-  top: 50%;
-  transform: translateY(-10px);
+.interview__legend::after {
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    content: "";
+    right: calc(100% + 39px);
+    width: 100vw;
+    height: 2px;
+    background-color: $green;
+    z-index: -1;
+    top: 23px;
+  }
 }
-
 
 .interview__list {
   margin: 0;
@@ -74,37 +137,108 @@
 
   &--info {
     margin: 0 -20px;
-    padding: 0 20px 25px;
+    padding: 0 20px 22px;
     border-bottom: 1px solid $silvergrey;
+
+    @media (min-width: $tablet-width) {
+      border-bottom: none;
+      margin: 0 0 73px;
+      padding: 0;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin: 0;
+    }
   }
 
   &--radio {
     margin: 0 -20px 26px;
     padding: 23px 20px 16px;
     border-bottom: 1px solid $silvergrey;
+
+    @media (min-width: $tablet-width) {
+      margin: 0 0 74px;
+      padding: 25px 27px 24px;
+      border: 1px solid $silvergrey;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding: 27px 31px 24px;
+      margin: 0;
+    }
   }
 
   &--owner {
     margin: 0 0 26px;
+
+    @media (min-width: $tablet-width) {
+      margin: 0 0 65px;
+    }
+
+    @media (min-width: $desktop-width) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 30px 78px;
+    }
+  }
+
+  &--owner .interview__item {
+    @media (min-width: $desktop-width) {
+      margin: 0;
+    }
   }
 
   &--checkbox {
-    margin: 0 0 34px 0;
+    margin: 0 0 33px 0;
+
+    @media (min-width: $tablet-width) {
+      margin: 0 0 51px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 33px 51px;
+    }
+
+    @media (min-width: $desktop-width) {
+      grid-template-columns: repeat(4, 20%);
+      justify-content: space-between;
+      row-gap: 30px;
+      margin: 0 0 59px;
+    }
   }
 }
 
+.interview__list--info .interview__label,
+.interview__list--owner .interview__label {
+  max-width: 95px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 125px;
+  }
+}
 
 .interview__item {
   margin: 0 0 14px 0;
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 1fr;
   align-items: center;
 
-  &--owner {
-    position: relative;
+  @media (min-width: $tablet-width) {
+    margin: 0 0 20px 0;
+  }
+
+  &--radio {
+    @media (min-width: $tablet-width) {
+      margin: 0 0 13px 0;
+    }
   }
 
   &--checkbox {
     margin: 0 0 12px 0;
+
+    @media (min-width: $tablet-width) {
+      margin: 0;
+    }
   }
 }
 
@@ -112,11 +246,23 @@
   margin: 0;
 }
 
+.interview__input-wrapper {
+  position: relative;
+}
 
 .interview__icon {
   position: absolute;
   top: 16px;
   right: 16px;
+
+  @media (min-width: $tablet-width) {
+    top: 19px;
+    right: 18px;
+  }
+
+  @media (min-width: $desktop-width) {
+    right: 20px;
+  }
 }
 
 .interview__label {
@@ -124,12 +270,20 @@
   line-height: 18px;
   text-transform: uppercase;
   margin: 0 15px 0 0;
-  flex-shrink: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 
   &--control {
     margin: -3px 0 0 0;
     padding: 0 0 0 15px;
     color: $accentgrey;
+
+    @media (min-width: $tablet-width) {
+      padding: 0 0 0 20px;
+    }
   }
 
   &--color {
@@ -138,6 +292,10 @@
 
   &--owner {
     margin: 0 10px 0 0;
+
+    @media (min-width: $tablet-width) {
+      margin: 0 21px 0 0;
+    }
   }
 }
 
@@ -150,6 +308,7 @@
 .interview__label-checkbox:hover .interview__control-mark {
   border: 1px solid $disabledgrey;
 }
+
 
 .interview__label-radio:active .interview__control-mark,
 .interview__label-checkbox:active .interview__control-mark {
@@ -178,6 +337,12 @@
   width: 30px;
   height: 30px;
   border: 1px solid $darkbasegrey;
+  flex-shrink: 0;
+
+  @media (min-width: $tablet-width) {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 .interview__input-radio:checked + .interview__control-mark::after {
@@ -192,6 +357,12 @@
   bottom: 0;
   right: 0;
   margin: auto;
+  transition: 0.3s;
+
+  @media (min-width: $tablet-width) {
+    width: 18px;
+    height: 18px;
+  }
 }
 
 .interview__input-checkbox:checked + .interview__control-mark::after {
@@ -205,6 +376,11 @@
   bottom: 0;
   right: 0;
   margin: auto;
+  transition: 0.5s;
+
+  @media (min-width: $tablet-width) {
+    background-image: url("../img/checked-tablet.svg");
+  }
 }
 
 .interview__input-radio:disabled + .interview__control-mark,
@@ -227,6 +403,7 @@
 .interview__textarea {
   font-family: $main-font;
   font-size: 16px;
+  line-height: 18px;
   color: $darkgrey;
   text-transform: uppercase;
   width: 100%;
@@ -235,11 +412,66 @@
   border: 1px solid $grey;
   min-height: 150px;
   margin: 0 0 22px 0;
+  background-color: transparent;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    padding: 10px 11px 12px 18px;
+    margin: 0 0 63px 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 0 66px 0;
+  }
+
+  &:focus-visible {
+    background-color: $generalgrey;
+    outline: none;
+  }
+
+  &:disabled {
+    background-color: $generalgrey;
+    color: rgba($darkgrey, 0.3);
+    pointer-events: none;
+  }
+}
+
+.interview__container {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 39px;
+    padding: 0 109px 0 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 568px 1fr;
+    column-gap: 82px;
+    margin: 0 0 49px;
+  }
 }
 
 .interview__button {
   margin: 0 0 21px 0;
+
+  @media (min-width: $tablet-width) {
+    width: auto;
+    min-width: 282px;
+    margin: 0;
+  }
 }
+
+.interview__button.button--second {
+  @media (max-width: $mobile-width-only) {
+    font-size: 16px;
+    line-height: 20px;
+    padding: 10px 0;
+  }
+}
+
 
 .interview__text-remark {
   font-family: $second-font;
@@ -247,4 +479,17 @@
   line-height: 18px;
   color: $black;
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 16px;
+    margin: -6px 0 0;
+    text-align: start;
+    padding: 0 0 0 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-align: start;
+    padding: 0;
+  }
 }

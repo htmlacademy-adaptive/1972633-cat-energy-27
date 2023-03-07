@@ -23,27 +23,20 @@
             <img class="header__logo-image" src="img/header/header-logo-mobile.svg" width="33" height="38"
               alt="Логотип Cat energy.">
           </picture>
-          <!-- <picture>
-            <source media="(min-width:768px)" srcset="img/header/logo-tablet.svg">
-            <img class="header__logo-image" src="img/header/logo-mobile.svg" width="33" height="38"
-              alt="Логотип Cat energy.">
-          </picture>
-          <picture>
-            <source media="(min-width:1440px)" srcset="img/header/logo-text-desktop.svg">
-            <img class="header__logo-text logo-text" src="img/header/logo-text-mobile.svg" width="101" height="18"
-              alt="Текст Cat energy.">
-          </picture> -->
         </a>
         <nav class="header__nav main-nav main-nav--closed main-nav--nojs">
           <button class="main-nav__toggle" type="button">
+            <span class="main-nav__toggle-line"></span>
+            <span class="main-nav__toggle-line"></span>
+            <span class="main-nav__toggle-line"></span>
             <span class="visually-hidden">Кнопка открытия меню</span>
           </button>
-          <ul class="main-nav__list">
+          <ul class="main-nav__list main-nav__list--space">
             <li class="main-nav__item">
               <a class="main-nav__link" href="index.html">Главная</a>
             </li>
             <li class="main-nav__item">
-              <a class="main-nav__link main-nav__link--current">Каталог продукции</a>
+              <span class="main-nav__link main-nav__link--current">Каталог продукции</span>
             </li>
             <li class="main-nav__item">
               <a class="main-nav__link" href="form.html">Подбор программы</a>
@@ -54,11 +47,9 @@
     </div>
   </header>
   <main class="main-container">
-    <div class="container">
-      <h1 class="main-container__title title">Каталог продукции</h1>
-    </div>
     <section class="catalog">
       <div class="container">
+        <h1 class="catalog__title title">Каталог продукции</h1>
         <h2 class="visually-hidden">Каталог</h2>
         <ul class="catalog__list">
           <li class="catalog__item">
@@ -263,7 +254,7 @@
             <dl class="catalog__specification">
               <div class="catalog__specification-wrapper">
                 <dt class="catalog__specification-name">Масса</dt>
-                <dd class="catalog__specification-value catalog__specification-value--space">500г</dd>
+                <dd class="catalog__specification-value catalog__specification-value--space">500 г</dd>
               </div>
               <div class="catalog__specification-wrapper">
                 <dt class="catalog__specification-name">Вкус</dt>
@@ -279,7 +270,7 @@
           </li>
           <li class="catalog__item catalog__item--more">
             <span class="catalog__decor"></span>
-            <p class="catalog__text">Показать еще 100500 товаров</p>
+            <h3 class="catalog__subtitle">Показать еще 100500 товаров</h3>
             <p class="catalog__subtext">На самом деле вкусов гораздо больше!</p>
             <!-- К ссылке обавить aria-disabled="true", чтобы ссылка стала неактивна -->
             <a class="catalog__link button button--dim" href="#">Показать все</a>
@@ -341,7 +332,7 @@
         </div>
       </div>
     </section>
-    <section class="contacts">
+    <section class="contacts contacts--second">
       <h2 class="visually-hidden">Контакты магазина Cat energy</h2>
       <div class="container">
         <div class="contacts__wrapper">
@@ -354,8 +345,8 @@
       </div>
       <div class="contacts__map-wrapper">
         <iframe class="contacts__map-iframe"
-          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d17445.06654326831!2d35.89348475!3d56.86938334999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1674160085052!5m2!1sru!2sru"
-          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1996.822608413316!2d30.31522021600736!3d59.968265981886944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5afc31%3A0x5f2ac55f567b2400!2sHTML%20Academy!5e0!3m2!1sru!2sru!4v1677691120918!5m2!1sru!2sru"
+          width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy"
           referrerpolicy="no-referrer-when-downgrade"></iframe>
         <noscript>
           <picture>
@@ -375,8 +366,11 @@
     <div class="container">
       <div class="footer__wrapper">
         <a class="footer__link" href="index.html">
-          <img class="footer__link-logo" src="img/footer/footer-logo.svg" width="128" height="24"
-            alt="Текст Cat energy.">
+          <svg class="footer__link-logo" aria-hidden="true" focusable="false" width="129" height="24"
+            viewBox="0 0 129 24" xmlns="http://www.w3.org/2000/svg">
+            <use href="img/sprite.svg#footer-logo" />
+          </svg>
+          <span class="visually-hidden">Текстовый логотип Cat energy</span>
         </a>
         <ul class="footer__list social">
           <li class="social__item">

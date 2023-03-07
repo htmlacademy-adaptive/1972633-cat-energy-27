@@ -11,6 +11,7 @@
   padding: 10px 0;
   text-transform: uppercase;
   color: $white;
+  transition: 0.5s;
 }
 
 .button:hover {
@@ -23,7 +24,7 @@
 }
 
 .button:focus-visible {
-  color: rgba($white, 0.5);
+  color: rgba($white, 0.7);
   opacity: 0.5;
   outline: none;
 }
@@ -34,7 +35,7 @@
 }
 
 .button[aria-disabled="true"] {
-  opacity: 0.5;
+  opacity: 0.7;
   pointer-events: none;
 }
 

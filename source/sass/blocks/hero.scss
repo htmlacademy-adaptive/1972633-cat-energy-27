@@ -6,18 +6,17 @@
   padding: 27px 0 20px;
 
   @media (min-width: $tablet-width) {
-    padding: 64px 0 0;
-    min-height: 874px;
+    padding: 62px 0 0;
     justify-content: flex-start;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 111px 0 0;
+    padding: 108px 0 0;
     min-height: 581px;
-    margin: 0 0 83px 0;
+    margin: 0 0 81px 0;
+    position: static;
   }
 }
-
 
 .hero::before {
   content: "";
@@ -48,7 +47,7 @@
     width: 50%;
     right: 0;
     left: 50%;
-    top: -112px;
+    top: 0;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/hero/hero-desktop@2x.jpg"), linear-gradient(to right, rgba(99, 167, 60, 1), 50%, rgba(97, 165, 58, 1));
@@ -56,22 +55,52 @@
   }
 }
 
+.hero .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 500px auto;
+    grid-template-rows: auto 1fr;
+    row-gap: 53px;
+    justify-content: flex-start;
+  }
+}
+
 .hero__image {
   display: block;
   margin: 0 auto 1px;
+}
+
+.hero__image-container {
+  display: flex;
+  justify-content: center;
 
   @media (min-width: $tablet-width) {
-    width: auto;
-    position: absolute;
-    top: 265px;
+    order: 6;
+    margin: -83px 0 0;
     z-index: -1;
-    left: 50%;
-    transform: translateX(-50%);
   }
 
   @media (min-width: $desktop-width) {
-    top: 30px;
-    transform: translateX(-162px);
+    grid-column: 2/3;
+    grid-row: 1/-1;
+    margin: -83px 0 0 -52px;
+  }
+}
+
+.hero__title-container {
+  margin: 0 0 29px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 51px 90px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-column: 1/2;
+    margin: 0 0 0 80px;
   }
 }
 
@@ -83,18 +112,18 @@
   @media (min-width: $tablet-width) {
     max-width: 432px;
     text-align: start;
-    margin: 0 0 39px 88px;
+    margin: 0 0 39px -2px;
   }
 
   @media (min-width: $desktop-width) {
-    margin: 0 0 39px 79px;
+    margin: 0 0 39px 0;
   }
 }
 
 .hero__text {
   line-height: 14px;
   text-transform: uppercase;
-  margin: 0 0 29px;
+  margin: 0;
   color: $white;
   text-align: center;
 
@@ -102,25 +131,22 @@
     color: $black;
     font-size: 20px;
     line-height: 20px;
-    margin: 0 0 51px 90px;
     text-align: start;
-  }
-
-  @media (min-width: $desktop-width) {
-    margin: 0 0 53px 80px;
   }
 }
 
 .hero__link {
   @media (min-width: $tablet-width) {
-    // position: absolute;
-    // top: 294px;
-    // left: 121px;
     max-width: 244px;
     margin: 0 0 0 90px;
+    order: 5;
+    display: flex;
+    justify-content: center;
   }
 
   @media (min-width: $desktop-width) {
     margin: 0 0 0 81px;
+    align-self: self-start;
+    grid-row: 2/3;
   }
 }

@@ -1,5 +1,5 @@
 .input {
-  padding: 14px 16px 12px 21px;
+  padding: 16px 16px 12px 20px;
   font-family: $main-font;
   font-size: 16px;
   font-weight: 400;
@@ -8,13 +8,28 @@
   outline: 1px solid $grey;
   border: none;
   width: 100%;
+  transition: 0.3s;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    padding: 13px 15px 9px 18px;
+  }
 
   &--owner {
     padding: 15px 39px 13px 16px;
+
+    @media (min-width: $tablet-width) {
+      padding: 11px 39px 11px 19px;
+    }
   }
 
   &--space-m {
-    padding: 14px 16px 13px 20px;
+    padding: 16px 16px 11px 20px;
+
+    @media (min-width: $tablet-width) {
+      padding: 13px 15px 9px 18px;
+    }
   }
 }
 
@@ -35,16 +50,11 @@
   outline: 2px solid $darkgrey;
 }
 
-.input:disabled {
-  background-color: $generalgrey;
-  pointer-events: none;
-}
-
-.input.error:focus {
+.input.error {
   outline: 2px solid $error;
 }
 
-.input.error:focus ~ .interview__icon {
+.input.error ~ .interview__icon {
   color: $error;
 }
 
@@ -52,9 +62,11 @@
   color: $green;
 }
 
-.input:disabled::placeholder {
+.input:disabled,
+.input:disabled:not(:placeholder-shown) {
+  background-color: $generalgrey;
   pointer-events: none;
-  opacity: 0.3;
+  color: rgba($darkgrey, 0.3);
 }
 
 .input:disabled ~ .interview__icon {
