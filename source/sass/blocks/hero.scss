@@ -55,7 +55,13 @@
   }
 }
 
-.hero .container {
+.hero__container {
+  @media (min-width: $tablet-width) {
+    padding: 0 30px;
+  }
+}
+
+.hero .hero__container {
   display: flex;
   flex-direction: column;
   justify-content: center;

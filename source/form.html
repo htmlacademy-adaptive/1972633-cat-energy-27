@@ -59,18 +59,21 @@
               <ul class="interview__list interview__list--info">
                 <li class="interview__item">
                   <label class="interview__label" for="name-field">Имя:*</label>
+                  <!-- Добавить для input модификатор input--error для появления красной рамки -->
                   <!--input добавить атрибут disabled, для неактивного состояния -->
                   <input class="interview__input input input--space-m" name="name" id="name-field" value="Барсик"
                     placeholder="Введите имя кота" type="text" required>
                 </li>
                 <li class="interview__item">
                   <label class="interview__label" for="weight-field">Вес&nbsp;(кг):*</label>
+                  <!-- Добавить для input модификатор input--error для появления красной рамки -->
                   <!--input добавить атрибут disabled, для неактивного состояния -->
                   <input class="interview__input input" name="weight" id="weight-field" value="7"
                     placeholder="Введите вес" type="text" required>
                 </li>
                 <li class="interview__item">
                   <label class="interview__label" for="age-field">Возраст&nbsp;(лет):</label>
+                  <!-- Добавить для input модификатор input--error для появления красной рамки -->
                   <!--input добавить атрибут disabled, для неактивного состояния -->
                   <input class="interview__input input" name="age" id="age-field" value="7"
                     placeholder="Введите возраст" type="text" required>
@@ -117,7 +120,7 @@
               <li class="interview__item interview__item--owner">
                 <label class="interview__label interview__label--owner" for="email-field">E-mail:*</label>
                 <div class="interview__input-wrapper">
-                  <!-- Добавить для input класс error для появления красной рамки -->
+                  <!-- Добавить для input модификатор input--error для появления красной рамки -->
                   <!--input добавить атрибут disabled, для неактивного состояния -->
                   <input class="interview__input input input--owner" type="email" name="email" id="email-field"
                     value="kuklachev@gmail.com" placeholder="Введите почту" required>
@@ -130,7 +133,7 @@
               <li class="interview__item interview__item--owner">
                 <label class="interview__label interview__label--owner" for="phone-field">Телефон:*</label>
                 <div class="interview__input-wrapper">
-                  <!-- Добавить для input класс error для появления красной рамки -->
+                  <!-- Добавить для input модификатор input--error для появления красной рамки -->
                   <!--input добавить атрибут disabled, для неактивного состояния -->
                   <input class="interview__input input input--owner" type="tel" name="phone" id="phone-field"
                     value="8 (960) 900-60-90" placeholder="Введите телефон" required>
@@ -215,6 +218,12 @@
           referrerpolicy="no-referrer-when-downgrade"></iframe>
         <noscript>
           <picture>
+            <source type="image/webp" media="(min-width:1280px)"
+              srcset="img/contacts/location-desktop.webp 1x, img/contacts/location-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width:768px)"
+              srcset="img/contacts/location-tablet.webp 1x, img/contacts/location-tablet@2x.webp 2x">
+            <source type="image/webp"
+              srcset="img/contacts/location-mobile.webp 1x, img/contacts/location-mobile@2x.webp 2x">
             <source media="(min-width:1280px)"
               srcset="img/contacts/location-desktop.jpg 1x, img/contacts/location-desktop@2x.jpg 2x">
             <source media="(min-width:768px)"

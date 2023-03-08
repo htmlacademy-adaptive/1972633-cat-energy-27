@@ -50,11 +50,11 @@
   outline: 2px solid $darkgrey;
 }
 
-.input.error {
+.input.input--error {
   outline: 2px solid $error;
 }
 
-.input.error ~ .interview__icon {
+.input.input--error ~ .interview__icon {
   color: $error;
 }
 
