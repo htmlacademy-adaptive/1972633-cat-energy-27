@@ -61,7 +61,6 @@
     align-items: center;
     background-color: $generalgrey;
     padding: 0 39px 39px 38px;
-    justify-content: flex-end;
     margin: 0;
     border-bottom: none;
   }
@@ -79,7 +78,7 @@
     @media (min-width: $tablet-width) {
       background-color: $white;
       border: 2px solid $generalgrey;
-      padding: 37px 37px;
+      padding: 81px 37px 37px 37px;
     }
   }
 }
@@ -91,11 +90,31 @@
   margin: 12px auto 0;
 
   @media (min-width: $tablet-width) {
-    margin: -77px auto 31px;
+    margin: -42px auto 31px;
   }
 
   @media (min-width: $desktop-width) {
-    margin: -76px auto 46px;
+    margin: -51px auto 46px;
+  }
+
+  &--space {
+    @media (min-width: $tablet-width) {
+      margin: -76px auto 31px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin: -76px auto 47px;
+    }
+  }
+
+  &--space-s {
+    @media (min-width: $tablet-width) {
+      margin: -71px auto 32px;
+    }
+
+    @media (min-width: $desktop-width) {
+      margin: -78px auto 48px;
+    }
   }
 
   &--space-m {
@@ -244,7 +263,7 @@
 
   &--space {
     @media (min-width: $tablet-width) {
-      padding: 0 6px 0 20px;
+      padding: 0 3px 0 20px;
     }
 
     @media (min-width: $desktop-width) {
@@ -269,6 +288,7 @@
 
 .catalog__link {
   grid-column: 1/-1;
+  margin: auto 0 0;
 }
 
 .catalog__decor::before {
